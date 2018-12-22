@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TodoList from './components/TodoList.jsx';
+import TodoList from 'components/TodoList';
 
-const todoData = ['Running', 'Homework'];
+const todoData = [{
+  id: 1,
+  text: 'Running',
+  completed: false,
+}, {
+  id: 2,
+  text: 'Homework',
+  completed: true,
+}];
 
 ReactDOM.render(
   <div>
