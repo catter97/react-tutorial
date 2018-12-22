@@ -1,26 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import TodoList from 'components/TodoList';
 
-const todoData = [{
-  id: 1,
-  text: 'Running',
-  completed: false,
-}, {
-  id: 2,
-  text: 'Homework',
-  completed: true,
-}];
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todos: [{
+        id: 1,
+        text: 'Running',
+        completed: false,
+      }, {
+        id: 2,
+        text: 'Homework',
+        completed: true,
+      }],
+    };
+  }
 
-const toggleCompleted = (id) => {
-  const todo = todoData.find(t => t.id === id);
-  todo.completed = !todo.completed;
-};
-
-const App = () => (
-  <div>
-    <h1>Todo</h1>
-    <TodoList todos={todoData} onClick={toggleCompleted} />
-  </div>
-);
+  render() {
+    const { todos } = this.state;
+    const toggleCompleted = (id) => {
+      const t = todos.map(todo => (
+        todo.id !== id ? todo : Object.assign({}, todo, { completed: !todo.completed })));
+      this.setState({ todos: t });
+    };
+    return (
+      <div>
+        <h1>Todo</h1>
+        <TodoList todos={todos} onClick={toggleCompleted} />
+      </div>
+    );
+  }
+}
 
 export default App;
