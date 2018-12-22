@@ -1,0 +1,19 @@
+{
+  "name": "react-tutorial",
+  "version": "1.0.0",
+  "description": "Tutorial for react.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catter97/react-tutorial.git"
+  },
+  "author": "changhyup cho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/catter97/react-tutorial/issues"
+  },
+  "homepage": "https://github.com/catter97/react-tutorial#readme"
+}
