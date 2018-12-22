@@ -4,7 +4,8 @@
   "description": "Tutorial for react.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/catter97/react-tutorial/issues"
   },
-  "homepage": "https://github.com/catter97/react-tutorial#readme"
+  "homepage": "https://github.com/catter97/react-tutorial#readme",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
+  }
 }
