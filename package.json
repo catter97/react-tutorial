@@ -4,9 +4,10 @@
   "description": "Tutorial for react.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "lint": "eslint . --ext js,jsx",
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch"
   },
   "repository": {
@@ -20,12 +21,17 @@
   },
   "homepage": "https://github.com/catter97/react-tutorial#readme",
   "dependencies": {
+    "connect": "^3.6.6",
+    "express": "^4.16.4",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "webpack": "^4.28.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -40,7 +46,6 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2"
   }
 }
