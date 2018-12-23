@@ -1,33 +1,32 @@
 import React, { Component } from 'react';
+import AddTodo from 'components/AddTodo';
 import TodoList from 'components/TodoList';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: [{
-        id: 1,
-        text: 'Running',
-        completed: false,
-      }, {
-        id: 2,
-        text: 'Homework',
-        completed: true,
-      }],
-    };
-  }
+  state = { id: 0, todos: [] };
+
+  addTodo = (text) => {
+    const { id, todos } = this.state;
+    const todo = { id: id + 1, text, completed: false };
+    const ts = Array.from(todos);
+    ts.push(todo);
+    this.setState({ id, todos: ts });
+  };
+
+  toggleCompleted = (id) => {
+    const { todos } = this.state;
+    const t = todos.map(todo => (
+      todo.id !== id ? todo : Object.assign({}, todo, { completed: !todo.completed })));
+    this.setState({ todos: t });
+  };
 
   render() {
     const { todos } = this.state;
-    const toggleCompleted = (id) => {
-      const t = todos.map(todo => (
-        todo.id !== id ? todo : Object.assign({}, todo, { completed: !todo.completed })));
-      this.setState({ todos: t });
-    };
     return (
       <div>
         <h1>Todo</h1>
-        <TodoList todos={todos} onClick={toggleCompleted} />
+        <AddTodo addTodo={this.addTodo} />
+        <TodoList todos={todos} onClick={this.toggleCompleted} />
       </div>
     );
   }
