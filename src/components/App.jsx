@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import AddTodo from 'components/AddTodo';
 import TodoList from 'components/TodoList';
 
@@ -9,6 +10,8 @@ const App = ({ todos }) => (
     <h1>Todo</h1>
     <AddTodo />
     <TodoList todos={todos} />
+    <br />
+    <Link to="/login">Login</Link>
   </div>
 );
 
