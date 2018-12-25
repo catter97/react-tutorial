@@ -3,6 +3,7 @@ module.exports = () => (req, res) => {
   <!doctype html>
     <html>
       <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
         <link rel="stylesheet" type="text/css" href="dist/bundle.css" />  
       </head>
       <body>
