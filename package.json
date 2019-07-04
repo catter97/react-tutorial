@@ -26,6 +26,7 @@
     "connect": "^3.6.6",
     "express": "^4.16.4",
     "history": "^4.7.2",
+    "http-proxy": "^1.17.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
@@ -36,6 +37,7 @@
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
+    "superagent": "^5.1.0",
     "webpack": "^4.28.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.3"
