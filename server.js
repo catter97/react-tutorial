@@ -12,7 +12,7 @@ const app = express();
 
 const apiProxy = httpProxy.createProxyServer();
 app.all('/api/*', (req, res) => {
-  apiProxy.web(req, res, { target: 'http://localhost:8088' }, e => console.error(e.toString())); // eslint-disable-line no-console
+  apiProxy.web(req, res, { target: 'http://192.168.0.71:8088' }, e => console.error(e.toString())); // eslint-disable-line no-console
 });
 
 const compiler = webpack(config);
